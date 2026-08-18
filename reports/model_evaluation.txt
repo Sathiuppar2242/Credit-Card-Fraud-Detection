@@ -1,0 +1,57 @@
+CREDIT CARD FRAUD DETECTION
+MODEL EVALUATION REPORT
+
+
+Dataset
+
+Training samples: 1,296,675
+Validation samples: 259,335
+
+Fraud Distribution
+
+Legitimate transactions: 1,289,169
+Fraudulent transactions: 7,506
+
+Model
+
+Algorithm: Random Forest Classifier
+Number of Trees: 50
+Class Weight: Balanced
+Random State: 42
+
+Features
+
+Transaction amount
+Transaction category
+Gender
+City population
+Customer latitude
+Customer longitude
+Merchant latitude
+Merchant longitude
+Transaction hour
+Transaction day
+Transaction month
+Transaction day of week
+
+Validation Results
+
+Fraud Precision: 0.89
+Fraud Recall: 0.79
+Fraud F1-Score: 0.84
+
+ROC-AUC: 0.9897
+Average Precision: 0.8883
+
+Confusion Matrix
+
+True Negative: 257682
+False Positive: 152
+False Negative: 316
+True Positive: 1185
+
+Conclusion
+
+The Random Forest model demonstrates strong performance in
+detecting fraudulent credit card transactions while handling
+the highly imbalanced target distribution.
