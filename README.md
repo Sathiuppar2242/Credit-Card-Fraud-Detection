@@ -1,71 +1,97 @@
-# Credit Card Fraud Detection
+# 💳 Credit Card Fraud Detection
 
+A Machine Learning-based Credit Card Fraud Detection system that analyzes transaction details and predicts whether a transaction is **Fraudulent** or **Legitimate**.
 
-## 📌 Project Overview
+The project includes a complete Machine Learning pipeline, exploratory data analysis, Random Forest classification model, and a Flask-based web application for real-time fraud prediction.
 
+---
 
-Credit Card Fraud Detection is an AI/ML project that detects potentially fraudulent credit card transactions using Machine Learning.
+## 🎯 Project Objective
 
+The objective of this project is to build an intelligent fraud detection system capable of identifying potentially fraudulent credit card transactions using Machine Learning.
 
-The project uses transaction data to train a Random Forest classification model and provides a Flask-based web application where users can enter transaction details and receive a fraud prediction.
+The system processes transaction information, applies the trained Machine Learning model, and provides a prediction through a user-friendly web interface.
 
+---
 
-## 🎯 Objectives
+## ✨ Key Features
 
+- 🔍 Credit card transaction fraud detection
+- 🤖 Random Forest Machine Learning model
+- 📊 Exploratory Data Analysis (EDA)
+- 🧹 Data preprocessing and feature engineering
+- ⏰ Time-based transaction features
+- 🌐 Flask web application
+- ⚡ Real-time transaction prediction
+- 📈 Fraud and legitimate transaction classification
+- 💾 Saved trained model and preprocessing pipeline
+- 📱 User-friendly web interface
 
-- Analyze credit card transaction data
-- Perform data preprocessing and feature engineering
-- Handle categorical and numerical features
-- Train a Machine Learning classification model
-- Evaluate the fraud detection model
-- Build a Flask web application
-- Provide real-time fraud prediction through a web interface
-
+---
 
 ## 🛠️ Technologies Used
 
-
+### Programming Language
 - Python
+
+### Machine Learning
+- Scikit-learn
+- Random Forest Classifier
 - Pandas
 - NumPy
-- Scikit-learn
+
+### Data Analysis & Visualization
 - Matplotlib
+- Seaborn
 - Jupyter Notebook
+
+### Web Development
 - Flask
 - HTML
 - CSS
 - JavaScript
-- Joblib
-- Git & GitHub
 
+### Development Tools
+- VS Code
+- Git
+- GitHub
 
-## 🤖 Machine Learning Model
+---
 
+## 📊 Dataset
 
-The project uses:
+The project uses a credit card transaction dataset containing transaction, customer, merchant, location, and fraud-related information.
 
+Important columns include:
 
-**Random Forest Classifier**
+- Transaction date and time
+- Transaction amount
+- Merchant
+- Transaction category
+- Gender
+- City population
+- Latitude and longitude
+- Merchant latitude and longitude
+- Fraud label
 
+### Fraud Distribution
 
-The model is trained to classify transactions into:
+The dataset is highly imbalanced, with legitimate transactions significantly outnumbering fraudulent transactions.
 
+This reflects a realistic fraud detection scenario where fraudulent transactions are rare compared to normal transactions.
 
-- `0` → Legitimate Transaction
-- `1` → Fraudulent Transaction
+---
 
-
-## 🔄 Project Workflow
-
+## 🔄 Machine Learning Workflow
 
 ```text
 Dataset
    ↓
-Data Exploration
-   ↓
 Data Preprocessing
    ↓
 Feature Engineering
+   ↓
+Exploratory Data Analysis
    ↓
 Train / Validation Split
    ↓
@@ -78,24 +104,99 @@ Save Model
 Flask Web Application
    ↓
 Fraud Prediction
-📂 Project Structure
+
+🧹 Data Preprocessing
+
+The preprocessing pipeline performs the following operations:
+
+Handles transaction data
+Creates time-based features
+Converts categorical variables into numerical representations
+Selects relevant features
+Prepares the data for Machine Learning
+Saves the preprocessing pipeline
+Time-Based Features
+
+The project creates:
+
+Transaction Hour
+Transaction Day
+Transaction Month
+Transaction Day of Week
+🤖 Machine Learning Model
+
+The project uses a Random Forest Classifier for fraud detection.
+
+Selected features include:
+
+Transaction amount
+Category
+Gender
+City population
+Customer latitude
+Customer longitude
+Merchant latitude
+Merchant longitude
+Transaction hour
+Transaction day
+Transaction month
+Transaction day of week
+
+The trained model is stored in the models directory.
+
+📈 Model Training
+
+The dataset is divided into training and validation datasets.
+
+Training Data
+Training samples: 1,037,340
+Fraudulent transactions: 6,005
+Legitimate transactions: 1,031,335
+Validation Data
+Validation samples: 259,335
+Fraudulent transactions: 1,501
+Legitimate transactions: 257,834
+
+The Random Forest model is trained using the training dataset and evaluated using the validation dataset.
+
+🌐 Web Application
+
+A Flask-based web application is included in this project.
+
+Users can enter transaction information through the web interface, and the trained Machine Learning model predicts whether the transaction is:
+
+🟢 Legitimate
+
+or
+
+🔴 Fraudulent
+
+The application loads the trained model and preprocessing pipeline to perform predictions.
+
+📸 Application Screenshots
+Home Page
+
+Fraud Detection Result
+
+📁 Project Structure
 Credit-Card-Fraud-Detection/
 │
 ├── data/
-│   ├── train.csv
-│   └── test.csv
+│   └── Dataset files
 │
 ├── images/
+│   ├── home.png
+│   └── fraud-result.png
 │
 ├── models/
 │   ├── fraud_model.pkl
 │   └── preprocessor.pkl
 │
 ├── notebooks/
-│   └── 01_data_exploration.ipynb
+│   └── Exploratory Data Analysis
 │
 ├── reports/
-│   └── model_evaluation.txt
+│   └── Model evaluation reports
 │
 ├── src/
 │   ├── preprocess.py
@@ -103,80 +204,86 @@ Credit-Card-Fraud-Detection/
 │
 ├── static/
 │   ├── css/
-│   │   └── style.css
 │   └── js/
 │
 ├── templates/
 │   └── index.html
 │
 ├── app.py
-├── requirements.txt
 ├── README.md
+├── requirements.txt
 └── .gitignore
-🌐 Web Application
+⚙️ Installation
 
-The project includes a Flask web application.
+Clone the repository:
 
-Users can enter transaction information through the web interface and receive a prediction indicating whether the transaction is potentially fraudulent or legitimate.
+git clone https://github.com/Sathiuppar2242/Credit-Card-Fraud-Detection.git
 
-Run the Application
+Navigate to the project directory:
 
-Activate the virtual environment:
+cd Credit-Card-Fraud-Detection
 
-.venv\Scripts\activate
+Create a virtual environment:
 
-Install the required packages:
+python -m venv .venv
+
+Activate the virtual environment on Windows:
+
+.venv\Scripts\Activate.ps1
+
+Install the required dependencies:
 
 pip install -r requirements.txt
+▶️ Run the Web Application
 
-Run the Flask application:
+Start the Flask application:
 
 python app.py
 
-Open the application in your browser:
+Then open the application in your browser:
 
 http://127.0.0.1:5000
-📊 Dataset
 
-The dataset contains credit card transaction information including transaction amount, category, location-related information, and other transaction features.
+Enter the transaction details and submit the form to receive a fraud prediction.
 
-The dataset contains a highly imbalanced target variable, with fraudulent transactions representing a small percentage of total transactions.
+🧪 Project Components
+1. Data Preprocessing
 
-🔍 Features Used
+src/preprocess.py
 
-The model uses features including:
+Handles data preprocessing and feature engineering.
 
-Transaction Amount
-Category
-Gender
-City Population
-Latitude
-Longitude
-Merchant Latitude
-Merchant Longitude
-Transaction Hour
-Transaction Day
-Transaction Month
-Transaction Day of Week
-📈 Model Evaluation
+2. Exploratory Data Analysis
 
-The model is evaluated using classification metrics including:
+notebooks/
 
-Precision
-Recall
-F1-Score
-Accuracy
-Confusion Matrix
+Contains analysis and visualization of transaction data and fraud patterns.
 
-The detailed evaluation results are available in:
+3. Model Training
 
-reports/model_evaluation.txt
-⚠️ Important Note
+src/train_model.py
 
-This project is developed for educational and demonstration purposes. It should not be used as a production financial fraud detection system without additional validation, security, monitoring, and domain-specific testing.
+Trains and evaluates the Random Forest fraud detection model.
 
+4. Web Application
+
+app.py
+
+Provides the Flask web interface and performs fraud predictions using the trained model.
+
+🔮 Future Enhancements
+Improve fraud detection performance using advanced Machine Learning algorithms
+Handle class imbalance using advanced techniques
+Add model comparison
+Add authentication
+Deploy the application to a cloud platform
+Add transaction history and analytics
+Add interactive fraud monitoring dashboard
 👨‍💻 Author
 
 Sathish R
 
 Computer Science & Engineering Student
+
+GitHub:
+https://github.com/Sathiuppar2242
