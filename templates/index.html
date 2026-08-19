@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Credit Card Fraud Detection</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+
+            <h1>💳 Credit Card Fraud Detection</h1>
+
+            <p>
+                AI-powered transaction risk analysis using
+                Machine Learning
+            </p>
+
+        </div>
+
+
+        <div class="status">
+
+            <span class="status-dot"></span>
+
+            <span>
+                Machine Learning Model Online
+            </span>
+
+        </div>
+
+
+        <div class="card">
+
+            <form method="POST">
+
+                <h2>Transaction Information</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="amount">
+                            Transaction Amount
+                        </label>
+
+                        <input
+                            type="number"
+                            id="amount"
+                            name="amount"
+                            min="0"
+                            step="0.01"
+                            value="100"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="category">
+                            Transaction Category
+                        </label>
+
+                        <select
+                            id="category"
+                            name="category"
+                            required
+                        >
+
+                            <option value="grocery_pos">
+                                Grocery POS
+                            </option>
+
+                            <option value="shopping_net">
+                                Shopping Net
+                            </option>
+
+                            <option value="misc_net">
+                                Miscellaneous Net
+                            </option>
+
+                            <option value="shopping_pos">
+                                Shopping POS
+                            </option>
+
+                            <option value="gas_transport">
+                                Gas & Transport
+                            </option>
+
+                            <option value="misc_pos">
+                                Miscellaneous POS
+                            </option>
+
+                            <option value="kids_pets">
+                                Kids & Pets
+                            </option>
+
+                            <option value="entertainment">
+                                Entertainment
+                            </option>
+
+                            <option value="personal_care">
+                                Personal Care
+                            </option>
+
+                            <option value="home">
+                                Home
+                            </option>
+
+                            <option value="food_dining">
+                                Food & Dining
+                            </option>
+
+                            <option value="grocery_net">
+                                Grocery Net
+                            </option>
+
+                            <option value="health_fitness">
+                                Health & Fitness
+                            </option>
+
+                            <option value="travel">
+                                Travel
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="gender">
+                            Gender
+                        </label>
+
+                        <select
+                            id="gender"
+                            name="gender"
+                            required
+                        >
+
+                            <option value="F">
+                                Female
+                            </option>
+
+                            <option value="M">
+                                Male
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="city_population">
+                            City Population
+                        </label>
+
+                        <input
+                            type="number"
+                            id="city_population"
+                            name="city_population"
+                            min="0"
+                            value="50000"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <h2>Location Information</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="customer_latitude">
+                            Customer Latitude
+                        </label>
+
+                        <input
+                            type="number"
+                            id="customer_latitude"
+                            name="customer_latitude"
+                            step="0.000001"
+                            value="40.000000"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="customer_longitude">
+                            Customer Longitude
+                        </label>
+
+                        <input
+                            type="number"
+                            id="customer_longitude"
+                            name="customer_longitude"
+                            step="0.000001"
+                            value="-75.000000"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="merchant_latitude">
+                            Merchant Latitude
+                        </label>
+
+                        <input
+                            type="number"
+                            id="merchant_latitude"
+                            name="merchant_latitude"
+                            step="0.000001"
+                            value="40.000000"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="merchant_longitude">
+                            Merchant Longitude
+                        </label>
+
+                        <input
+                            type="number"
+                            id="merchant_longitude"
+                            name="merchant_longitude"
+                            step="0.000001"
+                            value="-75.000000"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <h2>Transaction Time</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="transaction_hour">
+                            Transaction Hour
+                        </label>
+
+                        <input
+                            type="number"
+                            id="transaction_hour"
+                            name="transaction_hour"
+                            min="0"
+                            max="23"
+                            value="12"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="transaction_day">
+                            Transaction Day
+                        </label>
+
+                        <input
+                            type="number"
+                            id="transaction_day"
+                            name="transaction_day"
+                            min="1"
+                            max="31"
+                            value="15"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="transaction_month">
+                            Transaction Month
+                        </label>
+
+                        <input
+                            type="number"
+                            id="transaction_month"
+                            name="transaction_month"
+                            min="1"
+                            max="12"
+                            value="6"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="transaction_day_of_week">
+                            Day of Week
+                        </label>
+
+                        <input
+                            type="number"
+                            id="transaction_day_of_week"
+                            name="transaction_day_of_week"
+                            min="0"
+                            max="6"
+                            value="2"
+                            required
+                        >
+
+                        <small>
+                            0 = Monday, 6 = Sunday
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="predict-button"
+                >
+                    🔍 Check Transaction
+                </button>
+
+            </form>
+
+
+            {% if prediction %}
+
+                <div
+                    class="result
+                    {% if 'Fraudulent' in prediction %}
+                        fraud
+                    {% else %}
+                        legitimate
+                    {% endif %}"
+                >
+
+                    <h2>
+                        Prediction Result
+                    </h2>
+
+
+                    <h3>
+                        {{ prediction }}
+                    </h3>
+
+
+                    {% if probability is not none %}
+
+                        <p>
+                            Fraud Probability:
+                            <strong>
+                                {{ "%.2f"|format(probability * 100) }}%
+                            </strong>
+                        </p>
+
+
+                        <div class="progress-container">
+
+                            <div
+                                id="probability-bar"
+                                class="progress-bar"
+                                data-probability="{{ probability * 100 }}"
+                            >
+                            </div>
+
+                        </div>
+
+                    {% endif %}
+
+                </div>
+
+            {% endif %}
+
+        </div>
+
+
+        <footer>
+
+            <p>
+                Credit Card Fraud Detection |
+                Random Forest Machine Learning Model
+            </p>
+
+            <p>
+                Built with Python, Flask, Pandas and Scikit-learn
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <script>
+
+        const probabilityBar =
+            document.getElementById("probability-bar");
+
+        if (probabilityBar) {
+
+            const probability =
+                parseFloat(
+                    probabilityBar.dataset.probability
+                );
+
+            probabilityBar.style.width =
+                probability + "%";
+        }
+
+    </script>
+
+</body>
+
+</html>
