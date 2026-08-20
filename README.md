@@ -349,3 +349,12 @@ The project uses a Random Forest Classifier to identify potentially fraudulent c
 5. Evaluate model performance using classification metrics
 6. Save the trained model using Joblib
 
+
+## Project Results
+
+- The Random Forest classifier is trained to identify fraudulent transactions.
+- The project handles highly imbalanced transaction data.
+- Time-based transaction features are included to improve fraud detection.
+- Model performance is evaluated using classification metrics.
+- The trained model and preprocessing pipeline are saved for future predictions.
+
