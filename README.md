@@ -418,3 +418,17 @@ The Random Forest model is trained using selected transaction and time-based fea
 
 The data is divided into training and validation sets before model training and evaluation.
 
+
+## Project Workflow
+
+1. Collect and load transaction data
+2. Explore transaction and fraud patterns
+3. Clean and preprocess the data
+4. Create transaction time-based features
+5. Select relevant features for model training
+6. Split the data into training and validation sets
+7. Train the Random Forest classifier
+8. Evaluate the model using classification metrics
+9. Save the trained model and preprocessor
+10. Use the saved model for future fraud predictions
+
