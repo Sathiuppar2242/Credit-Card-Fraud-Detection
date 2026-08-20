@@ -335,3 +335,17 @@ The project uses credit card transaction data for fraud detection.
 - Fraud detection is treated as a binary classification problem.
 - The dataset is highly imbalanced, with fraudulent transactions representing a small portion of the total transactions.
 
+
+## Machine Learning Model
+
+The project uses a Random Forest Classifier to identify potentially fraudulent credit card transactions.
+
+### Model Workflow
+
+1. Load and preprocess transaction data
+2. Perform feature engineering
+3. Split data into training and validation sets
+4. Train the Random Forest model
+5. Evaluate model performance using classification metrics
+6. Save the trained model using Joblib
+
