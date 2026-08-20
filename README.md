@@ -1,4 +1,4 @@
-# 💳 Credit Card Fraud Detection
+#  Credit Card Fraud Detection
 
 A Machine Learning-based Credit Card Fraud Detection system that analyzes transaction details and predicts whether a transaction is **Fraudulent** or **Legitimate**.
 
