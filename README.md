@@ -358,3 +358,13 @@ The project uses a Random Forest Classifier to identify potentially fraudulent c
 - Model performance is evaluated using classification metrics.
 - The trained model and preprocessing pipeline are saved for future predictions.
 
+
+## Fraud Detection Statistics
+
+The dataset contains a highly imbalanced distribution between legitimate and fraudulent transactions.
+
+- Legitimate transactions: 1,289,169
+- Fraudulent transactions: 7,506
+- Total training transactions: 1,296,675
+- Fraudulent transactions represent approximately 0.58% of the training data.
+
