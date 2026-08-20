@@ -398,3 +398,23 @@ The Random Forest model is trained using selected transaction and time-based fea
 
 The data is divided into training and validation sets before model training and evaluation.
 
+
+## Model Training Details
+
+The Random Forest model is trained using selected transaction and time-based features.
+
+### Selected Features
+
+- Transaction amount
+- Transaction category
+- Gender
+- City population
+- Latitude and longitude
+- Merchant latitude and longitude
+- Transaction hour
+- Transaction day
+- Transaction month
+- Transaction day of week
+
+The data is divided into training and validation sets before model training and evaluation.
+
