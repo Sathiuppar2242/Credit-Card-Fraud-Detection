@@ -312,3 +312,16 @@ https://github.com/Sathiuppar2242
 - Jupyter Notebook
 - Git and GitHub
 
+
+## Technology Stack
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- Seaborn
+- Joblib
+- Jupyter Notebook
+- Git and GitHub
+
