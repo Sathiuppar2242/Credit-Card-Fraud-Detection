@@ -368,3 +368,13 @@ The dataset contains a highly imbalanced distribution between legitimate and fra
 - Total training transactions: 1,296,675
 - Fraudulent transactions represent approximately 0.58% of the training data.
 
+
+## Fraud Detection Statistics
+
+The dataset contains a highly imbalanced distribution between legitimate and fraudulent transactions.
+
+- Legitimate transactions: 1,289,169
+- Fraudulent transactions: 7,506
+- Total training transactions: 1,296,675
+- Fraudulent transactions represent approximately 0.58% of the training data.
+
