@@ -287,3 +287,15 @@ Computer Science & Engineering Student
 
 GitHub:
 https://github.com/Sathiuppar2242
+## Project Features
+
+- Credit card transaction fraud detection
+- Data preprocessing and feature engineering
+- Exploratory Data Analysis (EDA)
+- Fraud and non-fraud distribution analysis
+- Time-based transaction features
+- Random Forest classification model
+- Train-validation data splitting
+- Model evaluation using classification metrics
+- Saved trained model and preprocessor
+
