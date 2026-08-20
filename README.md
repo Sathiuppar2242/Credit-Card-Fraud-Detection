@@ -299,3 +299,16 @@ https://github.com/Sathiuppar2242
 - Model evaluation using classification metrics
 - Saved trained model and preprocessor
 
+
+## Technology Stack
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- Seaborn
+- Joblib
+- Jupyter Notebook
+- Git and GitHub
+
