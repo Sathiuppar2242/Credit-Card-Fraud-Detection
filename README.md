@@ -325,3 +325,13 @@ https://github.com/Sathiuppar2242
 - Jupyter Notebook
 - Git and GitHub
 
+
+## Dataset Information
+
+The project uses credit card transaction data for fraud detection.
+
+- Transaction records include transaction amount, category, location, customer information, and time-based features.
+- The dataset contains both fraudulent and legitimate transactions.
+- Fraud detection is treated as a binary classification problem.
+- The dataset is highly imbalanced, with fraudulent transactions representing a small portion of the total transactions.
+
