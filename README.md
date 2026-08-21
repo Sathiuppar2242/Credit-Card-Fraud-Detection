@@ -432,3 +432,13 @@ The data is divided into training and validation sets before model training and 
 9. Save the trained model and preprocessor
 10. Use the saved model for future fraud predictions
 
+
+## Project Structure
+
+- data/ - Dataset files
+- models/ - Trained machine learning models
+- notebooks/ - Exploratory analysis notebooks
+- src/ - Project source code
+- README.md - Project documentation
+- requirements.txt - Python dependencies
+
