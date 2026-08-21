@@ -488,3 +488,15 @@ The project can be further improved with additional machine learning and deploym
 - Build a user-friendly web interface
 - Add model monitoring and performance tracking
 
+
+## Usage
+
+To use the project locally:
+
+1. Clone the repository.
+2. Create and activate a Python virtual environment.
+3. Install the required dependencies.
+4. Run the preprocessing pipeline.
+5. Train the fraud detection model.
+6. Use the saved model for predictions.
+
