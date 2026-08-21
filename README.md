@@ -442,3 +442,13 @@ The data is divided into training and validation sets before model training and 
 - README.md - Project documentation
 - requirements.txt - Python dependencies
 
+
+## Project Structure
+
+- data/ - Dataset files
+- models/ - Trained machine learning models
+- notebooks/ - Exploratory analysis notebooks
+- src/ - Project source code
+- README.md - Project documentation
+- requirements.txt - Python dependencies
+
