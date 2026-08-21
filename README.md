@@ -476,3 +476,15 @@ The trained Random Forest model is evaluated using standard classification metri
 
 These metrics help evaluate the model's ability to identify fraudulent transactions in an imbalanced dataset.
 
+
+## Future Improvements
+
+The project can be further improved with additional machine learning and deployment capabilities.
+
+- Experiment with additional classification algorithms
+- Tune model hyperparameters
+- Improve handling of class imbalance
+- Add real-time transaction prediction
+- Build a user-friendly web interface
+- Add model monitoring and performance tracking
+
