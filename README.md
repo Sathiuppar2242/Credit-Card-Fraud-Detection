@@ -452,3 +452,14 @@ The data is divided into training and validation sets before model training and 
 - README.md - Project documentation
 - requirements.txt - Python dependencies
 
+
+## Data Preprocessing
+
+The transaction data is preprocessed before training the machine learning model.
+
+- Handle transaction data and categorical features
+- Create transaction hour, day, month, and day-of-week features
+- Encode categorical variables for machine learning
+- Prepare numerical features for model training
+- Apply the same preprocessing pipeline during prediction
+
