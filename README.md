@@ -463,3 +463,16 @@ The transaction data is preprocessed before training the machine learning model.
 - Prepare numerical features for model training
 - Apply the same preprocessing pipeline during prediction
 
+
+## Model Evaluation
+
+The trained Random Forest model is evaluated using standard classification metrics.
+
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Classification report
+
+These metrics help evaluate the model's ability to identify fraudulent transactions in an imbalanced dataset.
+
