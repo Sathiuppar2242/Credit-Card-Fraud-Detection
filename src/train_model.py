@@ -14,6 +14,15 @@ from sklearn.metrics import (
 
 
 # ============================================================
+# CONFIGURATION
+# ============================================================
+
+RANDOM_STATE = 42
+TEST_SIZE = 0.20
+N_ESTIMATORS = 50
+
+
+# ============================================================
 # 1. LOAD DATA
 # ============================================================
 
@@ -149,8 +158,8 @@ print("Processed feature shape:", X_processed.shape)
 X_train, X_valid, y_train, y_valid = train_test_split(
     X_processed,
     y,
-    test_size=0.20,
-    random_state=42,
+    test_size=TEST_SIZE,
+    random_state=RANDOM_STATE,
     stratify=y
 )
 
@@ -169,8 +178,8 @@ print(y_valid.value_counts())
 # ============================================================
 
 model = RandomForestClassifier(
-    n_estimators=50,
-    random_state=42,
+    n_estimators=N_ESTIMATORS,
+    random_state=RANDOM_STATE,
     n_jobs=-1,
     class_weight="balanced"
 )
