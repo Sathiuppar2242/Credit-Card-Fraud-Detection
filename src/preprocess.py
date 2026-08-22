@@ -1,5 +1,7 @@
 import pandas as pd
 
+TIME_FEATURES = ["transaction_hour", "transaction_day", "transaction_month", "transaction_day_of_week"]
+
 
 def load_data(train_path="data/train.csv", test_path="data/test.csv"):
     """Load training and testing datasets."""
